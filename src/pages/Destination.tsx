@@ -1,9 +1,9 @@
 import { useSearchParams, Link } from 'react-router-dom';
-
+import './Destination.scss';
 import { motion } from 'framer-motion';
 
-// import '../../public/data.json';
-import { useEffect, useState } from 'react';
+import data from '../data/data.json';
+// import { useEffect, useState } from 'react';
 
 const upAnimation = {
   key: 'up',
@@ -21,19 +21,18 @@ export default function destination() {
   // let [index, setIndex] = useState<number>(0);
   const [searchParams] = useSearchParams();
   const pathId = Number(searchParams.get('id'));
-  const [data, setData] = useState(null);
 
-  const fetchData = async () => {
-    // const response = await fetch('./data.json');
-    const response = await fetch('./data.json');
-    const json = await response.json();
-    console.log(json);
-    setData(json);
-  };
+  // const [data, setData] = useState(null);
 
-  useEffect(() => {
-    fetchData();
-  }, []);
+  // useEffect(() => {
+  //   const fetchData = async () => {
+  //     const response = await fetch('./data.json');
+  //     const json = await response.json();
+  //     console.log(json);
+  //     setData(json);
+  //   };
+  //   fetchData();
+  // }, []);
 
   return (
     <>
