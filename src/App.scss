@@ -1,0 +1,120 @@
+@use './sass/mixins.scss';
+@use './sass/variables';
+
+html {
+  font-size: 100%;
+  box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+*:focus {
+  outline: dotted 5px #ffd60a;
+  outline-offset: 1px;
+}
+
+body {
+  font-family: variables.$font-body;
+  font-weight: 400;
+  font-size: 0.9375rem;
+  color: variables.$color-light-purple;
+
+  max-width: 100%;
+}
+
+img {
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+li {
+  list-style: none;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.inner-container {
+  margin: 0 auto;
+  // display: grid;
+  // place-content: center;
+  padding: 1.5rem 1.5rem;
+  min-height: 100vh;
+  @include mixins.mq(small) {
+    padding: 0;
+    display: block;
+  }
+  @include mixins.mq(medium) {
+    padding-top: 2.5rem;
+  }
+  &.home {
+    background-image: url('/assets/home/background-home-mobile.jpg');
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+    @include mixins.mq(small) {
+      background-image: url('/assets/home/background-home-tablet.jpg');
+    }
+    @include mixins.mq(desktop) {
+      background-image: url('/assets/home/background-home-desktop.jpg');
+    }
+  }
+  &.destination {
+    background-image: url('/assets/destination/background-destination-mobile.jpg');
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+    @include mixins.mq(small) {
+      background-image: url('/assets/destination/background-destination-tablet.jpg');
+    }
+    @include mixins.mq(desktop) {
+      background-image: url('/assets/destination/background-destination-desktop.jpg');
+    }
+  }
+  &.crew {
+    background-image: url('/assets/crew/background-crew-mobile.jpg');
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+    @include mixins.mq(small) {
+      background-image: url('/assets/crew/background-crew-tablet.jpg');
+    }
+    @include mixins.mq(desktop) {
+      background-image: url('/assets/crew/background-crew-desktop.jpg');
+    }
+  }
+  &.tech {
+    background-image: url('/assets/technology/background-technology-mobile.jpg');
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+    @include mixins.mq(small) {
+      background-image: url('/assets/technology/background-technology-tablet.jpg');
+    }
+    @include mixins.mq(desktop) {
+      background-image: url('/assets/technology/background-technology-desktop.jpg');
+    }
+  }
+}

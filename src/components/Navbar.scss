@@ -1,0 +1,143 @@
+@use '../sass/mixins.scss';
+@use '../sass/variables';
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  @include mixins.mq(small) {
+    padding-left: 2.4375rem;
+  }
+  @include mixins.mq(medium) {
+    padding-left: 3.375rem;
+  }
+  &__container {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: -15.875rem;
+    width: 15.875rem;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.04);
+    backdrop-filter: blur(33px);
+    z-index: 4;
+    @include mixins.mq(small) {
+      position: relative;
+      right: 0;
+      width: auto;
+      padding: 0;
+    }
+    &.active {
+      right: 0;
+    }
+  }
+  &__menu {
+    margin-top: 7.375rem;
+    @include mixins.mq(small) {
+      display: flex;
+      align-items: center;
+      margin-top: 0;
+      padding: 2.5rem 3rem;
+    }
+    @include mixins.mq(medium) {
+      padding: 2.375rem 7.6875rem;
+      position: relative;
+    }
+    &::after {
+      @include mixins.mq(medium) {
+        content: '';
+        width: calc(100vw - (55px + 48px + (100% - 48px) + 48px));
+        height: 1px;
+        background-color: variables.$color-white;
+        opacity: 0.25;
+        position: absolute;
+        right: calc(100% - 48px);
+      }
+    }
+    & li {
+      font-family: variables.$font-primary;
+      text-transform: uppercase;
+      color: variables.$color-white;
+      line-height: 19px;
+      letter-spacing: 2.7px;
+      position: relative;
+      transition: all 0.2s ease;
+      @include mixins.mq(small) {
+        font-size: 0.875rem;
+        line-height: 17px;
+        letter-spacing: 2.3625px;
+      }
+      @include mixins.mq(medium) {
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 19px;
+        letter-spacing: 2.7px;
+      }
+      &:not(:last-child) {
+        margin-bottom: 2rem;
+        @include mixins.mq(small) {
+          margin-bottom: 0;
+        }
+        @include mixins.mq(medium) {
+          margin-right: 3rem;
+        }
+      }
+      &:first-child,
+      &:nth-child(3) {
+        margin-right: 2.3125rem;
+      }
+      &:nth-child(2) {
+        margin-right: 2.625rem;
+      }
+      &:hover::after,
+      &:focus::after {
+        @include mixins.mq(small) {
+          content: '';
+          position: absolute;
+          width: 100%;
+          height: 3px;
+          background-color: variables.$color-white;
+          bottom: -2.5rem;
+          left: 0;
+          opacity: 0.5;
+        }
+      }
+      &.active::after {
+        @include mixins.mq(small) {
+          content: '';
+          position: absolute;
+          width: 100%;
+          height: 3px;
+          background-color: variables.$color-white;
+          bottom: -2.5rem;
+          left: 0;
+        }
+      }
+
+      & span {
+        font-weight: bold;
+        margin-right: 0.6875rem;
+        @include mixins.mq(small) {
+          display: none;
+        }
+        @include mixins.mq(medium) {
+          display: inline-block;
+        }
+      }
+    }
+  }
+}
+
+.menu-btn {
+  z-index: 5;
+  @include mixins.mq(small) {
+    display: none;
+  }
+}
+
+.logo-container {
+  width: 2.5rem;
+  @include mixins.mq(medium) {
+    width: 3rem;
+  }
+}
