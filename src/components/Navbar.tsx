@@ -4,7 +4,7 @@ import './Navbar.scss';
 import { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 
-export default function navbar({ pageName }: { pageName: string }) {
+export default function Navbar({ pageName }: { pageName: string }) {
   const ref = useRef<HTMLDivElement>(null);
   const [clicked, setClicked] = useState(false);
   const [expanded, setExpanded] = useState(false);

@@ -6,7 +6,6 @@ import data from '../data/data.json';
 // import { useEffect, useState } from 'react';
 
 const upAnimation = {
-  key: 'up',
   initial: { opacity: 0, y: '50%' },
   animate: { opacity: 1, y: 0 },
   transition: { duration: 1.5, ease: 'easeInOut' },
@@ -17,7 +16,7 @@ const upAnimation = {
 //   return json(data);
 // };
 
-export default function destination() {
+export default function Destination() {
   // let [index, setIndex] = useState<number>(0);
   const [searchParams] = useSearchParams();
   const pathId = Number(searchParams.get('id'));
