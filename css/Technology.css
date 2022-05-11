@@ -1,0 +1,216 @@
+.technology__container {
+  max-width: 1440px;
+  margin: 0 auto;
+  display: grid;
+}
+@media screen and (min-width: 62.5em) {
+  .technology__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 10.40625rem;
+    margin-top: 3.75rem;
+  }
+}
+.technology__title {
+  font-family: "Barlow Condensed", sans-serif;
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 19px;
+  letter-spacing: 2.7px;
+  text-transform: uppercase;
+  margin-top: 1.5rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+@media screen and (min-width: 34em) {
+  .technology__title {
+    text-align: left;
+    padding-left: 2.4375rem;
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+    letter-spacing: 3.375px;
+    margin-top: 2.5rem;
+    margin-bottom: 3.75rem;
+  }
+}
+@media screen and (min-width: 62.5em) {
+  .technology__title {
+    padding-left: 10.40625rem;
+    font-size: 1.75rem;
+    line-height: 24px;
+    letter-spacing: 4.725px;
+    margin-bottom: 0;
+  }
+}
+.technology__title span {
+  opacity: 0.25;
+  font-weight: 700;
+  margin-right: 0.875rem;
+}
+.technology__hero-container {
+  grid-row: 1/2;
+  margin-left: -1.6rem;
+  margin-right: -1.6rem;
+  display: flex;
+  flex: 0 1 515px;
+  height: 100%;
+}
+@media screen and (min-width: 34em) {
+  .technology__hero-container {
+    margin: 0;
+  }
+}
+.technology__hero-container img {
+  max-width: 100%;
+}
+.technology__btn-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2.125rem;
+  margin-bottom: 1.625rem;
+}
+@media screen and (min-width: 34em) {
+  .technology__btn-container {
+    margin-top: 3.5rem;
+    margin-bottom: 2.75rem;
+  }
+}
+@media screen and (min-width: 62.5em) {
+  .technology__btn-container {
+    grid-column: 1/2;
+    grid-row: 1/-1;
+    flex-direction: column;
+  }
+}
+.technology__btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  font-family: "Bellefair", serif;
+  line-height: 18px;
+  border-radius: 50%;
+  width: 2.5rem;
+  height: 2.5rem;
+}
+@media screen and (min-width: 34em) {
+  .technology__btn {
+    width: 3.75rem;
+    height: 3.75rem;
+    font-size: 1.5rem;
+    line-height: 28px;
+    letter-spacing: 1.5px;
+  }
+}
+.technology__btn:not(:last-child) {
+  margin-right: 1rem;
+}
+@media screen and (min-width: 62.5em) {
+  .technology__btn:not(:last-child) {
+    margin-right: 0;
+    margin-bottom: 2rem;
+  }
+}
+.technology__btn.active {
+  background-color: #ffffff;
+  color: #0b0d17;
+}
+.technology__btn:hover, .technology__btn:focus {
+  border-color: #ffffff;
+}
+@media screen and (min-width: 62.5em) {
+  .technology__left-container {
+    display: flex;
+    align-items: center;
+  }
+}
+.technology__text-container {
+  grid-row: 2/-1;
+  text-align: center;
+  margin-bottom: 3.5625rem;
+}
+@media screen and (min-width: 34em) {
+  .technology__text-container {
+    padding: 0 9.6875rem;
+    margin-bottom: 6.0625rem;
+  }
+}
+@media screen and (min-width: 62.5em) {
+  .technology__text-container {
+    grid-column: 2/3;
+    grid-row: 1/-1;
+    padding: 0;
+    margin-bottom: 0;
+    margin-left: 5rem;
+    margin-right: 8.125rem;
+    text-align: left;
+    max-width: 29.325rem;
+  }
+}
+.technology__sub-title {
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 400;
+  color: #d0d6f9;
+  text-transform: uppercase;
+  line-height: 17px;
+  letter-spacing: 2.3625px;
+  margin-bottom: 0.5rem;
+}
+@media screen and (min-width: 34em) {
+  .technology__sub-title {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+}
+@media screen and (min-width: 62.5em) {
+  .technology__sub-title {
+    margin-bottom: 0.6875rem;
+  }
+}
+.technology__name {
+  font-family: "Bellefair", serif;
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: #ffffff;
+  text-transform: uppercase;
+  line-height: 1.75rem;
+  margin-bottom: 1rem;
+}
+@media screen and (min-width: 34em) {
+  .technology__name {
+    font-size: 2.5rem;
+    line-height: 46px;
+  }
+}
+@media screen and (min-width: 62.5em) {
+  .technology__name {
+    font-size: 3.5rem;
+    line-height: 64px;
+    margin-bottom: 1.0625rem;
+  }
+}
+.technology__description {
+  line-height: 25px;
+  font-weight: 400;
+}
+@media screen and (min-width: 34em) {
+  .technology__description {
+    font-size: 1rem;
+    line-height: 28px;
+    margin-bottom: 0;
+  }
+}
+@media screen and (min-width: 62.5em) {
+  .technology__description {
+    font-size: 1.125rem;
+    line-height: 32px;
+  }
+}
+
+/*# sourceMappingURL=Technology.css.map */

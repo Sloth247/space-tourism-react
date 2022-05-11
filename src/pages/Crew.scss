@@ -1,0 +1,195 @@
+@use '../sass/mixins.scss';
+@use '../sass/variables';
+
+.crew {
+  &__title {
+    font-family: variables.$font-primary;
+    color: variables.$color-white;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 19px;
+    letter-spacing: 2.7px;
+    text-transform: uppercase;
+    margin-top: 1.5rem;
+    margin-bottom: 2rem;
+    @include mixins.mq(small) {
+      padding-left: 2.4375rem;
+      font-size: 1.25rem;
+      line-height: 1.5rem;
+      letter-spacing: 3.375px;
+      margin-top: 2.5rem;
+      margin-bottom: 3.75rem;
+    }
+    @include mixins.mq(medium) {
+      padding-left: 10.40625rem;
+      font-size: 1.75rem;
+      line-height: 24px;
+      letter-spacing: 4.725px;
+      margin-bottom: 0;
+    }
+    & span {
+      opacity: 0.25;
+      font-weight: 700;
+      margin-right: 0.875rem;
+    }
+  }
+  &__inner-container {
+    max-width: 1440px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-rows: repeat(2, minmax(min-content, max-content));
+    grid-template-columns: 1fr;
+
+    @include mixins.mq(medium) {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      min-height: calc(100vh - 95px - 40px - 40px - 24px);
+    }
+  }
+  &__hero-container {
+    grid-row: 1/2;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    @include mixins.mq(small) {
+      grid-row: 2/-1;
+    }
+    @include mixins.mq(medium) {
+      padding-left: 1.25rem;
+      padding-right: 5.6rem;
+    }
+    & img {
+      width: auto;
+      max-height: 13.9735rem;
+      @include mixins.mq(small) {
+        max-height: 33.25rem;
+      }
+      @include mixins.mq(medium) {
+        max-height: none;
+        width: 100%;
+      }
+    }
+  }
+
+  &__text-container {
+    grid-row: 2/-1;
+    text-align: center;
+    @include mixins.mq(small) {
+      grid-row: 1/2;
+      display: grid;
+      grid-template-rows: repeat(2, minmax(min-content, max-content));
+      padding: 0 9.6875rem;
+      margin-bottom: 2.5rem;
+    }
+    @include mixins.mq(medium) {
+      // grid-column: 1/2;
+      text-align: left;
+      padding: 0;
+      padding-left: 10.40625rem;
+      padding-top: 9.625rem;
+      margin-bottom: 0;
+    }
+  }
+
+  &__btn-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 2rem;
+    border-top: 1px solid #383b4b;
+    padding-bottom: 2rem;
+    @include mixins.mq(small) {
+      grid-row: 2/-1;
+      border-top: none;
+      padding-top: 0;
+    }
+    @include mixins.mq(medium) {
+      justify-content: flex-start;
+      margin-bottom: 5.875rem;
+      padding-bottom: 0;
+    }
+  }
+  &__btn {
+    width: 10px;
+    height: 10px;
+    background-color: variables.$color-white;
+    border-radius: 50%;
+    opacity: 0.17;
+    @include mixins.mq(medium) {
+      width: 15px;
+      height: 15px;
+    }
+    &.active {
+      opacity: 1;
+    }
+    &:hover,
+    &:focus {
+      opacity: 0.5;
+    }
+    &:not(:last-child) {
+      margin-right: 1rem;
+      @include mixins.mq(medium) {
+        margin-right: 1.5rem;
+      }
+    }
+  }
+  &__content {
+    @include mixins.mq(small) {
+      grid-row: 1/2;
+    }
+  }
+  &__role {
+    font-family: variables.$font-secondary;
+    font-size: 1rem;
+    font-weight: 400;
+    color: variables.$color-white;
+    opacity: 0.5;
+    text-transform: uppercase;
+    line-height: 18px;
+    margin-bottom: 0.5rem;
+    @include mixins.mq(small) {
+      font-size: 1.5rem;
+      line-height: 28px;
+    }
+    @include mixins.mq(medium) {
+      font-size: 2rem;
+      line-height: 37px;
+      margin-bottom: 0.9375rem;
+    }
+  }
+  &__name {
+    font-family: variables.$font-secondary;
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: variables.$color-white;
+    text-transform: uppercase;
+    line-height: 1.75rem;
+    margin-bottom: 1rem;
+    @include mixins.mq(small) {
+      font-size: 2.5rem;
+      line-height: 46px;
+    }
+    @include mixins.mq(medium) {
+      font-size: 3.5rem;
+      line-height: 64px;
+      margin-bottom: 1.6875rem;
+    }
+  }
+  &__bio {
+    line-height: 25px;
+    font-weight: 400;
+    margin-bottom: 5rem;
+    @include mixins.mq(small) {
+      font-size: 1rem;
+      line-height: 28px;
+      margin-bottom: 2.5rem;
+    }
+    @include mixins.mq(medium) {
+      max-width: 27.75rem;
+      font-size: 1.125rem;
+      line-height: 32px;
+      margin-bottom: 7.5rem;
+    }
+  }
+}

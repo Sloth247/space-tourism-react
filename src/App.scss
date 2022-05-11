@@ -62,47 +62,55 @@ button {
   // place-content: center;
   padding: 1.5rem 1.5rem;
   min-height: 100vh;
+  background-image: url('./assets/home/background-home-mobile.jpg');
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
   @include mixins.mq(small) {
     padding: 0;
     display: block;
+    background-image: url('./assets/home/background-home-tablet.jpg');
   }
   @include mixins.mq(medium) {
     padding-top: 2.5rem;
   }
+  @include mixins.mq(desktop) {
+    background-image: url('./assets/home/background-home-desktop.jpg');
+  }
   &.home {
-    background-image: url('/assets/home/background-home-mobile.jpg');
+    background-image: url('./assets/home/background-home-mobile.jpg');
     background-repeat: no-repeat;
     background-position: top center;
     background-size: cover;
     @include mixins.mq(small) {
-      background-image: url('/assets/home/background-home-tablet.jpg');
+      background-image: url('./assets/home/background-home-tablet.jpg');
     }
     @include mixins.mq(desktop) {
-      background-image: url('/assets/home/background-home-desktop.jpg');
+      background-image: url('./assets/home/background-home-desktop.jpg');
     }
   }
   &.destination {
-    background-image: url('/assets/destination/background-destination-mobile.jpg');
+    background-image: url('./assets/destination/background-destination-mobile.jpg');
     background-repeat: no-repeat;
     background-position: top center;
     background-size: cover;
     @include mixins.mq(small) {
-      background-image: url('/assets/destination/background-destination-tablet.jpg');
+      background-image: url('./assets/destination/background-destination-tablet.jpg');
     }
     @include mixins.mq(desktop) {
       background-image: url('/assets/destination/background-destination-desktop.jpg');
     }
   }
   &.crew {
-    background-image: url('/assets/crew/background-crew-mobile.jpg');
+    background-image: url('./assets/crew/background-crew-mobile.jpg');
     background-repeat: no-repeat;
     background-position: top center;
     background-size: cover;
     @include mixins.mq(small) {
-      background-image: url('/assets/crew/background-crew-tablet.jpg');
+      background-image: url('./assets/crew/background-crew-tablet.jpg');
     }
     @include mixins.mq(desktop) {
-      background-image: url('/assets/crew/background-crew-desktop.jpg');
+      background-image: url('./assets/crew/background-crew-desktop.jpg');
     }
   }
   &.tech {
@@ -116,5 +124,19 @@ button {
     @include mixins.mq(desktop) {
       background-image: url('/assets/technology/background-technology-desktop.jpg');
     }
+  }
+}
+.error-container {
+  display: grid;
+  place-content: center;
+  min-height: 50vh;
+  justify-items: center;
+  row-gap: 5rem;
+  grid-row-gap: 5rem;
+}
+.error-title {
+  font-size: 5rem;
+  @include mixins.mq(small) {
+    font-size: 7rem;
   }
 }

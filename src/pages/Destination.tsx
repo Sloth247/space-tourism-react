@@ -3,35 +3,12 @@ import './Destination.scss';
 import { motion } from 'framer-motion';
 
 import data from '../data/data.json';
-// import { useEffect, useState } from 'react';
 
-const upAnimation = {
-  initial: { opacity: 0, y: '50%' },
-  animate: { opacity: 1, y: 0 },
-  transition: { duration: 1.5, ease: 'easeInOut' },
-};
-
-// export const loader: LoaderFunction = async () => {
-//   console.log(data);
-//   return json(data);
-// };
-
-export default function Destination() {
-  // let [index, setIndex] = useState<number>(0);
+export default function Destination({ upMotion }: { upMotion: object }) {
   const [searchParams] = useSearchParams();
   const pathId = Number(searchParams.get('id'));
-
-  // const [data, setData] = useState(null);
-
-  // useEffect(() => {
-  //   const fetchData = async () => {
-  //     const response = await fetch('./data.json');
-  //     const json = await response.json();
-  //     console.log(json);
-  //     setData(json);
-  //   };
-  //   fetchData();
-  // }, []);
+  console.log(pathId);
+  console.log(data.destinations[pathId].images.png);
 
   return (
     <>
@@ -44,7 +21,7 @@ export default function Destination() {
         <span>01</span> Pick your destination
       </motion.h1>
       <div className="destination__inner">
-        <motion.div className="destination__hero-container" {...upAnimation}>
+        <motion.div className="destination__hero-container" {...upMotion}>
           <img
             src={data.destinations[pathId].images.png}
             alt=""
@@ -70,13 +47,13 @@ export default function Destination() {
                 </Link>
               ))}
           </div>
-          <motion.h2 className="destination__planet-name" {...upAnimation}>
+          <motion.h2 className="destination__planet-name" {...upMotion}>
             {data.destinations[pathId].name}
           </motion.h2>
-          <motion.p className="destination__description" {...upAnimation}>
+          <motion.p className="destination__description" {...upMotion}>
             {data.destinations[pathId].description}
           </motion.p>
-          <motion.div {...upAnimation} className="destination__stats-container">
+          <motion.div {...upMotion} className="destination__stats-container">
             <div className="destination__distance-container">
               <h3>Avg. distance</h3>
               <p>{data.destinations[pathId].distance}</p>
