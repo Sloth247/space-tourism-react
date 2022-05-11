@@ -5,6 +5,12 @@
     }
   }
 
+  @if $breakpoint == adjustment {
+    @media screen and (min-width: 46em) {
+      @content;
+    }
+  }
+
   @if $breakpoint == desktop {
     @media screen and (min-width: 62.5em) {
       @content;

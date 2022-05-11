@@ -3,9 +3,19 @@
 
 .main {
   &__inner {
+    padding: 0;
     padding-bottom: 5.625rem;
-    padding: 0 10.3125rem;
-    padding-bottom: 8.1875rem;
+    @include mixins.mq(small) {
+      padding: 0;
+      padding-bottom: 4.125rem;
+    }
+    @include mixins.mq(adjustment) {
+      padding: 0 8.4375rem;
+      padding-bottom: 4.125rem;
+    }
+    @include mixins.mq(desktop) {
+      padding: 0 10.3125rem;
+    }
   }
   &__container {
     max-width: 1110px;
