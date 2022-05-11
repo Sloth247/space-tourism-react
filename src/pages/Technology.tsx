@@ -32,7 +32,6 @@ export default function Technology({
                   }
                   aria-current={pathId === tech.id ? 'page' : 'false'}
                   key={tech.id}
-                  // onClick={() => handleClick(tech.id)}
                 >
                   <span>{tech.id + 1}</span>
                 </Link>
